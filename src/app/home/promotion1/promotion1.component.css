@@ -1,0 +1,37 @@
+
+
+ @media screen and (max-width: 600px) 
+ {
+ 
+.one{
+        align-content: center;
+        text-align: center;
+        font-size: 30px;
+      
+    }
+.names
+{
+    text-align: center;
+    font-size: 13px;
+
+ }
+
+   }
+@media screen and (min-width: 600px) {
+ 
+.names
+{
+    text-align: center;
+    font-size: 20px;
+
+ }
+    
+.our-h1{
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+
+}
