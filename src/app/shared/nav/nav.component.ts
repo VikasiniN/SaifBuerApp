@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {SharedService} from '../shared.service';
 import {Footer} from '../footer/footer.model';
+import {Router} from '@angular/router';
+import {Header} from './header.model';
 
 @Component({
   selector: 'app-nav',
@@ -16,7 +18,11 @@ export class NavComponent implements OnInit {
   selected: any;
 
   footerDetails: Footer;
-  constructor(private sharedService: SharedService) { }
+  isCollapsed: boolean;
+  header: Header[];
+  logoImage: string;
+email;
+  constructor(private sharedService: SharedService, private router: Router) { }
 
   ngOnInit() {
     this.logo();
@@ -38,5 +44,12 @@ logo() {
   }
   toggleLeave() {
     this.dropdownShow = !this.dropdownShow;
+  }
+  navBarShow()   {
+    this.dropdownShow = !this.dropdownShow;
+  }
+  logOut()    {
+    this.sharedService.sessionLogout();
+    this.router.navigate(['account/signin']);
   }
 }

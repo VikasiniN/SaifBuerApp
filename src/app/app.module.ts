@@ -15,12 +15,14 @@ import {MatInputModule, MatCardModule
 import {ReactiveFormsModule} from '@angular/forms';
 import {FooterComponent} from './shared/footer/footer.component';
 import {NavComponent} from './shared/nav/nav.component';
+import {CategoryComponent} from './shared/category/category.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddSeoComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'seo'}),

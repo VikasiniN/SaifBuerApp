@@ -6,7 +6,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './home/home.module#HomeModule'
-  }
+  } , {
+    path: 'product',
+    loadChildren: './product-management/product-management.module#ProductManagementModule'
+  } ,
+  {
+    path: 'account',
+    loadChildren: './account-info/account-info.module#AccountInfoModule'
+  },
 ];
 
 @NgModule({

@@ -7,10 +7,11 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: 'banner', component: BannerComponent,
-  },{
+  },
+  {
     path: 'welcome', component: HomeComponent,
   }
-]
+];
 
 @NgModule({
   declarations: [],

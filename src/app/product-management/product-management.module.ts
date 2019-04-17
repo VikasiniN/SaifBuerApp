@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from './nav/nav.component';
-import { Routes, RouterModule } from '@angular/router';
-import {SharedRoutingModule} from './shared-routing.module';
-import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatSidenavModule,
   MatListModule,
@@ -31,16 +29,27 @@ import {
   MatNativeDateModule,
   MatPaginatorModule,
   MatTableModule,
-  MatTabsModule,
   MatSortModule,
+  MatTabsModule,
+  MatSliderModule
 } from '@angular/material';
+import { ProductRoutingModule } from './product-routing.module';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductService } from './product.service';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { ProductDetailViewComponent } from './product-detail-view/product-detail-view.component';
+import {ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {PlaceOrderComponent} from './place-order/place-order.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ProductListComponent, ProductDetailComponent, ProductFilterComponent, ProductDetailViewComponent, 
+    ShoppingCartComponent, PlaceOrderComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule,
-    CommonModule,
+    ReactiveFormsModule,
+    ProductRoutingModule,
+    HttpClientModule,
     MatCardModule,
     MatIconModule,
     MatTooltipModule,
@@ -62,7 +71,11 @@ import {
     MatTableModule,
     MatSortModule,
     MatTabsModule,
+    MatCheckboxModule,
     MatRadioModule,
-  ]
+    MatExpansionModule,
+    MatSliderModule
+  ],
+  providers: [ProductService]
 })
-export class SharedModule { }
+export class ProductManagementModule { }
