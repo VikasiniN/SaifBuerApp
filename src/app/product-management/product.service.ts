@@ -6,6 +6,7 @@ import { Product } from '../shared/model/product.model';
 import { Cart } from '../shared/model/cart.model';
 import {AddressModel} from '../account-info/address/address.model';
 import {Order} from '../shared/model/order.model';
+import {Booking} from '../shared/model/booking.model';
 
 @Injectable({
   providedIn: 'root'
@@ -143,5 +144,14 @@ inventoryUpdate(orderdetails: Order): Observable<Order>  {
   const cartUrl = 'inventory/';
   const url: string = this.mainServiceUrl + cartUrl;
   return this.httpClient.post<Order>(url, orderdetails);
+}
+
+// booking
+
+// tslint:disable-next-line: adjacent-overload-signatures
+ placeBooking(orderdetails: Booking): Observable<Order>  {
+  const cartUrl = 'booking/';
+  const url: string = this.serviceUrl + cartUrl;
+  return this.httpClient.post<Booking>(url, orderdetails);
 }
 }

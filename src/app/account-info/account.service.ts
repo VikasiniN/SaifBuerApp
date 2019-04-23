@@ -9,6 +9,7 @@ import { AppSetting } from './../config/appSetting';
 import { Observable, from } from 'rxjs';
 import { Product } from '../shared/model/product.model';
 import { Order } from './../shared/model/order.model';
+import {Booking} from '../shared/model/booking.model';
 
 @Injectable({
   providedIn: 'root'
@@ -62,10 +63,15 @@ export class AccountService {
     const url: string = this.serviceUrl + cartUrl;
     return this.http.post<any>(url, cart);
   }
+  getProducts(): Observable<any> {
+    const categoryUrl = 'allproducts';
+    const url: string = this.serviceUrl + categoryUrl ;
+    return this.http.get<Product>(url);
+  }
 
-  getCustomerOrderDetails(userId): Observable<Order> {
-    const urlprofile = this.serviceUrl + 'orderdetails/' + userId;
-    return this.http.get<Order>(urlprofile);
+  getCustomerOrderDetails(userId): Observable<Booking> {
+    const urlprofile = this.serviceUrl + 'booking/' + userId;
+    return this.http.get<Booking>(urlprofile);
   }
 }
 

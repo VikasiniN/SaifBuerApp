@@ -70,6 +70,7 @@ addToCartServer(userId, product) {
   this.cart.product = product;
   this.accountService.addToCart(this.cart).subscribe(data => {
   this.productModel = data;
+  sessionStorage.removeItem('cart');
   }, error => {
     console.log(error);
   });

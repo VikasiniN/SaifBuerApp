@@ -9,6 +9,7 @@ import {AddressModel} from '../../account-info/address/address.model';
 import {Order} from '../../shared/model/order.model';
 import {Inventory} from './inventory.model';
 import { from } from 'rxjs';
+import {Booking} from '../../shared/model/booking.model';
 
 
 
@@ -22,6 +23,7 @@ export class PlaceOrderComponent implements OnInit {
   id;
   productModel: Product;
   orderModel: Order;
+  bookingModel: Booking;
   message;
   action;
   moqModel;
@@ -106,33 +108,22 @@ onSubmit() {
 
 
 }
-  placeOrder(total) {
-    this.message = 'Order Placed  successfully';
-    this.orderModel = new Order();
-    this.orderModel.products = this.orderSummary;
-    this.orderModel.total = this.totalValue;
-    this.orderModel.addressDetails = this.billingDetails;
-    this.orderModel.customerId = this.userID;
-    this.inventoryModel = new Inventory();
-    this.inventoryModel.products = this.orderSummary;
-    this.inventoryModel.domainName = this.serviceUrl;
-    this.productService.placeOrder(this.orderModel).subscribe(data => {
+  placeBooking(total) {  // booking
+    this.message = 'Booking Placed  successfully';
+    this.bookingModel = new Booking();
+    this.bookingModel.products = this.orderSummary;
+    this.bookingModel.total = this.totalValue;
+    this.bookingModel.addressDetails = this.billingDetails;
+    this.bookingModel.customerId = this.userID;
+    this.productService.placeBooking(this.bookingModel).subscribe(data => {
       this.snackBar.open(this.message, this.action, {
         duration: 3000,
       });
       this.removeCart();
-      this.inventoryUpdate(this.inventoryModel);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/welcome']);
       }, err => {
     console.log(err);
   });
-  }
-  inventoryUpdate(inventory) {
-    this.productService.inventoryUpdate(inventory).subscribe(data => {
-      console.log(data);
-    }, err => {
-      console.log(err);
-    });
   }
   removeCart() {
     this.productService.clearCart(this.userID).subscribe(data => {

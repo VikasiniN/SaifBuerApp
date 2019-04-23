@@ -46,11 +46,12 @@ import { ListAddressComponent } from './list-address/list-address.component';
 import { ListCardComponent } from './list-card/list-card.component';
 import { CardDetailsService } from './card-details/card-details.service';
 import { OrderComponent } from './order-mananagement/order/order.component';
+import { BookingsComponent } from './booking-management/bookings/bookings.component';
 
 @NgModule({
   declarations: [RegistrationComponent,
     CardDetailsComponent, AddressComponent, ProfileComponent,
-     SigninComponent, AccountDetailsComponent, ListAddressComponent, ListCardComponent, OrderComponent],
+     SigninComponent, AccountDetailsComponent, ListAddressComponent, ListCardComponent, OrderComponent, BookingsComponent],
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule,
     AccountInfoRoutingModule,

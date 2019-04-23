@@ -41,10 +41,11 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
 import { ProductDetailViewComponent } from './product-detail-view/product-detail-view.component';
 import {ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {PlaceOrderComponent} from './place-order/place-order.component';
+import { ProductBookingComponent } from './product-booking/product-booking.component';
 
 @NgModule({
   declarations: [ProductListComponent, ProductDetailComponent, ProductFilterComponent, ProductDetailViewComponent, 
-    ShoppingCartComponent, PlaceOrderComponent],
+    ShoppingCartComponent, PlaceOrderComponent, ProductBookingComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
