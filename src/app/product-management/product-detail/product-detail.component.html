@@ -3,25 +3,29 @@
     <div class="col-12 col-sm-12 col-md-4 col-lg-6">
       <div class="row" style="padding-top: 20px; width: 100%;">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="padding-top: 20px; width: 100%;">
-          <button mat-button>
+          <div class="mat-big">
             <div *ngIf="!primeHide">
               <div class="zoom">
-                <img [src]="productModel?.productImageName[0]" class="img-fluidss">
+                <img [src]="productModel?.productImageName[0]" class="img-responsive">
               </div>
             </div>
             <div *ngIf="showImages">
               <div class="zoom1">
-                <img [src]="selectedImg" class="img-fluids">
+                <img [src]="selectedImg" class="img-responsive">
               </div>
             </div>
-          </button>
+          </div>
           <br>
         </div>
-        <div class="col-3 col-sm-3 col-md-3 col-lg-2" *ngFor="let data of productModel?.productImageName">
-          <button mat-raised-button [ngClass]="{'activeImg' : selectedSmallImg === data}" class="ras-btn"><a><img
+
+        
+        <div class="col-3 col-sm-3 col-md-3 col-lg-2" *ngFor="let data of productModel?.productImageName" class="small">
+          <button mat-button [ngClass]="{'activeImg' : selectedSmallImg === data}" class="ras-btn"><a><img
                 (mouseover)="clickImg(data)" [src]="data" class="img-fluidsss"></a>
           </button>
         </div>
+
+
       </div>
     </div>
     <div class="col-12 col-sm-12 col-md-8 col-lg-6 detailsView">
@@ -33,9 +37,9 @@
   <div class="row gridRow">
     <div class="col-12 col-md-12 col-lg-12">
       <div class="var-btnn">
-        <button mat-raised-button class="variants">
-          <h2 class="relatedSection">Variants</h2>
-        </button>
+        
+          <h2 class="relatedSection">Similar Products</h2>
+        
       </div>
     </div>
     <div class="col-6 col-sm-3 col-md-3 col-lg-2 pointerImage" *ngFor="let data of relatedProducts">
