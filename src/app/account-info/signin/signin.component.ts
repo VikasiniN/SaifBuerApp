@@ -6,6 +6,7 @@ import {SignIn} from './signIn.model';
 import {AccountService} from '../account.service';
 import { Cart } from './../../shared/model/cart.model';
 import { Product } from './../../shared/model/product.model';
+import {numberValue} from './../../shared/validation/number.validation';
 
 @Component({
   selector: 'app-signin',
@@ -30,7 +31,7 @@ export class SigninComponent implements OnInit {
   createForm() {
     this.userId = sessionStorage.getItem('userId');
     this.signInForm = this.fb.group({
-      mobileNumber: ['', Validators.required],
+      mobileNumber: ['', numberValue],
       password: ['', Validators.required]
     });
   }
@@ -42,9 +43,10 @@ onSubmit() {
   this.signInModel.password = this.signInForm.controls.password.value;
   this.accountService.signIn(this.signInModel).subscribe(data => {
     if (!data) {
-     this.pwdError = true;
-     sessionStorage.setItem('login', 'false');
-     sessionStorage.removeItem('userId');
+      console.log('invalid');
+      this.pwdError = true;
+      sessionStorage.setItem('login', 'false');
+      sessionStorage.removeItem('userId');
     } else {
       /* this.setCookie(data[0]._id); */
       sessionStorage.setItem('login', 'true');

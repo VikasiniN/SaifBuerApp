@@ -120,7 +120,7 @@ onSubmit() {
         duration: 3000,
       });
       this.removeCart();
-      this.router.navigate(['/home/welcome']);
+      this.router.navigate(['/account/bookings']);
       }, err => {
     console.log(err);
   });

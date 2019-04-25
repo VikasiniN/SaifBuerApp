@@ -15,7 +15,7 @@
       <li class="nav-item dropdown" (mouseenter)="toggleDropdown(cat)" *ngFor="let cat of superCategory; let i = index"
        >
         <a class="nav-link dropdown-toggle"
-        [class.selected]="cat === selected"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        [class.selected]="cat === selected"    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ cat.categoryName | titlecase}}
         </a>
         <div *ngIf="cat._id === selectedDropDown" (mouseleave)="toggleDropdownLeave(cat)" class="row">
