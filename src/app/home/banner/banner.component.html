@@ -1,11 +1,10 @@
+<div class="row">
+  <div class="col-md-12"
+   *ngFor="let bannerImg of bannerModel; let i = index" >
+      <div *ngIf="slideIndex === i">
+          <img [src]="bannerImg.bannerImage" class="img-fluid">
+      </div>
+  </div>
 
-<div class="banner-img-1">
-  <div class ="jumbotron-fluid" *ngFor="let banner of bannerModel; let i = index;">
-    <div *ngIf="i === 0">
-      <img [src]="banner.bannerImage"
-      class="imageSize" alt="Responsive image"> 
-    </div>
-</div>
-<br>
-
-
+<a class="prev" (click)="minusSlides(slideIndex)">&#10094;</a>
+<a class="next" (click)="plusSlides(slideIndex)">&#10095;</a>

@@ -19,8 +19,11 @@ export class Promotion1Component implements OnInit {
   getPromotions() {
     this.homeService.getPromotions().subscribe(data => {
       this.promotionsModel = data;
+      console.log(data, 'promotions');
     }, err => {
       console.log(err);
     });
   }
-}
+  detailView( val) {
+console.log('id', val);
+ }}
