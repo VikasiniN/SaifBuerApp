@@ -1,4 +1,4 @@
-<nav class="navbar  navbar-expand-lg   border-dark navbar-light bg-light" style="margin-top:10px;">
+<nav class="navbar  navbar-expand-lg   border-dark navbar-light bg-light" >
   <a class="navbar-brand d-sm-none d-md-none d-xs-block" href="#">Category</a>
   <button class="navbar-toggler" type="button" (click)="toggleNavbar()"
    data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -15,13 +15,13 @@
       <li class="nav-item dropdown" (mouseenter)="toggleDropdown(cat)" *ngFor="let cat of superCategory; let i = index"
        >
         <a class="nav-link dropdown-toggle"
-        [class.selected]="cat === selected"    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ cat.categoryName | titlecase}}
+        [class.selected]="cat === selected"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <b>{{ cat.categoryName | titlecase}}</b> 
         </a>
         <div *ngIf="cat._id === selectedDropDown" (mouseleave)="toggleDropdownLeave(cat)" class="row">
           <div class="dropdown-menu" [ngClass]="{'show': cat._id === selectedDropDown}">
             <li *ngFor="let subcat of cat.mainCategory" (mouseenter)="toggleDropdown(cat)">
-              <a class="dropdown-item" (click)="viewCategory(subcat._id)"   [class.selected]="subcat === selected" >  {{subcat.mainCategoryName | titlecase}}</a>
+              <a class="dropdown-item gridIss" (click)="viewCategory(subcat._id)"   [class.selected]="subcat === selected" ><h6 class="subMenu">{{subcat.mainCategoryName | titlecase}}</h6></a>
             </li>
           </div>
         </div>

@@ -20,14 +20,14 @@
           <div class="col-md-4" *ngFor="let product of productModel">
             <div class="card-control" >
               <div class="mtss">
-                <div>
+                <div> 
                   <div class="zoom">
                     <img class="img-fluid" alt="smaple image" [src]="product.productImageName[0]" (click)="viewSingleProduct(product._id)">
                   </div>
                   <div class="car-body">
                     <h4 class="card-title">{{ product.productName }}</h4>
                     <div>
-                      <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> ₹ {{ product.price }} </p>  
+                      <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> ₹{{ product.price }} </p>  
                     </div>
                   </div>
                <!-- <div class="car-body">

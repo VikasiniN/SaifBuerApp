@@ -33,6 +33,7 @@ import {
   MatTableModule,
   MatTabsModule,
   MatSortModule,
+  MatBadgeModule,
 } from '@angular/material';
 
 @NgModule({
@@ -63,6 +64,7 @@ import {
     MatSortModule,
     MatTabsModule,
     MatRadioModule,
+    MatBadgeModule,
   ]
 })
 export class SharedModule { }

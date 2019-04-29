@@ -1,32 +1,80 @@
 .img-fluid {
-    width: 480px;
-    height: 600px;
-    padding: 20px;
-  }
+  width: 635px;
+  height: 630px;
+
+ 
+}
+
+.img-responsive {
+  width: 250px;
+  height: 280px;
+  padding-left: 10px;
   
-  .fluid-imgss {
-    width: 240px;
-    height: 260px;
-    padding: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30px;
-   
-  }
-  
+  padding-top: 10px;
+
+}
   .pro-name {
     text-align: center;
     font-size: 25px;
     padding-right: 60px;
-    font-weight:  bolder;
-  
+    font-weight: bolder;
+
   }
-  
+
   .pro-names {
     font-size: 17px;
     font-weight: bolder;
-    color: rgba(61, 59, 59, 0.788);
-    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.788);
+    padding-left: 30px;
     padding-right: 10px;
     padding-top: 10px;
+    width: 75px;
+    height: 18px;
+    background: #ffffff;
+    margin: -15px 0 0 -50px;
+    padding: 5px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 18px;
+    text-align: center;
   }
+
+  .pro-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+
+.gridImga{
+ width: 100px;
+}
+h2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h2:before,
+h2:after {
+  content: '';
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 2 0 20px;
+}
+
+h2:after {
+  margin: 0 0 0 20px;
+}
+h2{
+color: gray;
+margin-top: 10px;
+margin-bottom: 40px;
+}
+.gridPro{
+  
+  padding-left: 80px;
+}

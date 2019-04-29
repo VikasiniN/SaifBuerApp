@@ -1,6 +1,7 @@
 .subs{
     text-align: center;
     color: rgb(146, 140, 140);
+    font-optical-sizing: 500px;
 }
 .tagp{
     text-align: center;
@@ -10,12 +11,34 @@
 .form-control{
     width: 300px;
     height: 50px;
-    padding-left: 40px;
-    padding-top: 10px;
+    /* padding-left: 40px; */
+   
     padding-right: 20px;
+    box-shadow: 0 1px 48px 0 #ebebeb63, 0 1px 2px 0 rgba(0, 0, 0, .19);
+
+
 }
 
 .form-group{
     padding-left: 25px;
-    padding-bottom: 55px;
+    margin-bottom:  200px;
+
+}
+.btn-sm{
+    box-shadow: 0 1px 18px 0 #ebebeb63, 0 1px 109px 0 rgba(0, 0, 0, .19);
+    background-color: rgb(156, 155, 155);
+    margin-bottom: 10px;
+    width: 120px;
+    font-size: 14px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+.gridJump{
+    height: 350px;
+    box-shadow: 0 1px 108px 0 #ebebeb63, 0 1px 8px 0 rgba(0, 0, 0, .19);
+    opacity:50px;
+
 }

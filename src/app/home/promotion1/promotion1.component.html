@@ -1,19 +1,15 @@
-<br>
-<br>
-<div class="promotion1" > 
-  <h1 class="our-h1">{{promotionsModel[0]?.promotionTitle}}</h1>
+<div class="promotion1"> 
+  <h1 class="our-h1"><h3>{{promotionsModel[0]?.promotionTitle}}</h3></h1>
   <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-6 names" *ngFor="let data of promotionsModel[0].joinedtable">
-
-
-        <img [src]="data.productImageName[0]" style="width:210px;height: 237px" (click)="detailView(data.productId)">
-        <b>{{data.productName}}</b>
+  <div>
+    <div class="row gridImg">
+      <div class="col-md-3 col-3 names" *ngFor="let data of promotionsModel[0]?.joinedtable" >
+        <div class="promoImg" >
+        <img [src]="data?.productImageName[0]"  class="img-responsive">
+      </div>
+        <b >{{data.productName}}</b>
         <br>
-        ₹ {{data.price}}
-
-
+       <h6>₹ {{data.price}}  </h6>
       </div>
     </div>
   </div>

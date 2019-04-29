@@ -1,0 +1,105 @@
+.three {
+    padding: 3px;
+  
+  }
+  
+  .product-name {
+    font-size: 18px;
+  }
+  
+  .btn-numbers {
+    background: rgb(255, 255, 255);
+    height: 40px;
+  }
+  
+  .btn-number {
+  
+    background: rgb(235, 235, 235);
+    width: 40px;
+  }
+  
+  .btn-num {
+    width: 40px;
+    background: rgb(235, 235, 235);
+  }
+  
+  h4:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  h4 {
+    text-align: center;
+  
+  }
+  
+  
+  .cart-num {
+    background: rgb(255, 255, 255);
+    height: 40px;
+    text-align: center;
+    width: 40px;
+  
+  
+  }
+  
+  .prize {
+    padding-top: 20px;
+  }
+  
+  .cardss {
+    background: #f1f0f0;
+    padding: 10px;
+    height: 55px;
+  }
+  
+  .btn-number:hover {
+    background: rgb(10, 109, 1);
+  }
+  
+  .btn-num:hover {
+    background: rgb(255, 0, 0);
+  }
+  
+  .row .gridImage {
+    box-shadow: 0 1px 28px 0 #d4d2d2, 0 0px 3px 0 rgba(0, 0, 0, 0.212);
+    background-color: #fff;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    width: 1000px;
+    
+  }
+  
+  .delete {
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+  
+  .gridI {
+    width: 280px;
+    padding-top: 40px;
+    padding-left: 50px;
+    box-shadow: 0 1px 28px 0 #00000033, 0 1px 2px 0 rgba(0, 0, 0, .19);
+    margin-bottom: 150px;
+    background: rgb(255, 255, 255);
+    height: 250px;
+  
+  }
+  .img-responsive{
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+  }
+  .btnn{
+    width: 150px;
+    box-shadow: 0 1px 48px 0 #7c777779, 0 1px 2px 0 rgba(0, 0, 0, 0.144);
+    margin-bottom: 50px;
+    background-color: rgb(128, 128, 133);
+    height: 40px;
+    
+    padding-top: 10px;
+    
+  }
+  .pull-rights{
+  padding-top: 30px;
+  text-align: center;
+  }

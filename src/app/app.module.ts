@@ -32,7 +32,7 @@ import {CategoryComponent} from './shared/category/category.component';
     NoopAnimationsModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [SeoService],
   bootstrap: [AppComponent]
