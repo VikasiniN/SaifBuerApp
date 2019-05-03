@@ -1,3 +1,85 @@
-<p>
-  buy-in-bulk works!
-</p>
+<div class="row">
+    <div class="col-md-4">
+text
+    </div>
+    <div class="col-md-6">
+
+        <form [formGroup]="regForm" (ngSubmit)="!regForm.invalid && onSubmit()" novalidate style="padding-top:40px">
+            <div class="row">
+              <div class="col-md-4">
+          
+              </div>
+              <mat-card class="highwa">
+              <div class="col-md-4 registerCard">
+                <h5 class="cartHeader">Register</h5>
+                <div class="row registerSetup">
+                    <div class="col-md-12">
+                        <mat-form-field >
+                          <mat-label>Full Name</mat-label>
+                          <input matInput placeholder="Full Name" formControlName="fullName" required>
+                          <button mat-button matSuffix mat-icon-button aria-label="email">
+                            <mat-icon>email</mat-icon>
+                          </button>
+                          <mat-error *ngIf="regForm.controls['fullName'].errors?.required">
+                              Full Name is
+                            <strong>required</strong>
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                  <div class="col-md-12">
+                    <mat-form-field >
+                      <mat-label>Your Email Address</mat-label>
+                      <input matInput placeholder="Email Address" formControlName="emailId" required>
+                      <button mat-button matSuffix mat-icon-button aria-label="email">
+                        <mat-icon>email</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-12">
+                    <mat-form-field>
+                      <mat-label>Mobile Number</mat-label>
+                      <input matInput placeholder="Mobile Number" maxlength="10" formControlName="mobileNumber" required>
+                      <button mat-button matSuffix mat-icon-button aria-label="Mobile Number">
+                        <mat-icon>phone</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-12">
+                    <mat-form-field>
+                      <mat-label>City</mat-label>
+                      <input matInput placeholder="City" formControlName="city" required>
+                      <button mat-button matSuffix mat-icon-button aria-label="User Name">
+                          <mat-icon>location_city</mat-icon>
+                      </button>
+                      <mat-error *ngIf="regForm.controls['city'].errors?.required">
+                          City is
+                        <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-12">
+                      <mat-form-field>
+                        <mat-label>Product</mat-label>
+                        <input matInput placeholder="Product" formControlName="products" required>
+                        <button mat-button matSuffix mat-icon-button aria-label="User Name">
+                          <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                        <mat-error *ngIf="regForm.controls['products'].errors?.required">
+                            Product is
+                          <strong>required</strong>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  <div class="col-md-12">
+                    <div class="regis-btn">
+                    <button class="registerButton" mat-stroked-button  type="submit">Register</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          
+            </div>
+            </form>
+    </div>
+    </div>

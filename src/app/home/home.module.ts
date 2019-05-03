@@ -18,13 +18,75 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { FaqComponent } from './faq/faq.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import {
+  MatSidenavModule,
+  MatListModule,
+  MatTooltipModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatMenuModule,
+  MatSnackBarModule,
+  MatGridListModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatRadioModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatProgressSpinnerModule,
+  MatExpansionModule,
+  MatRippleModule,
+  MatDialogModule,
+  MatChipsModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatStepperModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatTableModule,
+  MatSortModule,
+  MatTabsModule,
+  MatSliderModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [BannerComponent, CategoryContentComponent, FooterComponent, ProductComponent, Promotion1Component, Promotion2Component,
      ReviewComponent, StripComponent, SubscribeComponent, HomeComponent, AdsComponent, SupportComponent, BuyInBulkComponent, ContactUsComponent, PrivacyPolicyComponent, TermsAndConditionsComponent, FaqComponent],
   imports: [
-    CommonModule,
-    HomeRoutingModule 
-  ]
+    CommonModule, FormsModule, ReactiveFormsModule,
+    HomeRoutingModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTooltipModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    MatRippleModule,
+    MatDialogModule,
+    MatChipsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    MatTabsModule,
+    MatSliderModule
+  ],
 })
 export class HomeModule { }
