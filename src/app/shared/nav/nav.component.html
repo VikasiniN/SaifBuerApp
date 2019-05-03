@@ -36,64 +36,85 @@
   <app-category></app-category>
  -->
 
- <nav class="navbar  navbar-expand-lg   border-dark navbar-light bg-light">
+
+ <nav class="navbar  navbar-expand-lg   border-dark navbar-light  bg-light">
   <div class="logo-img" *ngFor="let data of footerDetails">
-    <a class="navbar-brand"  routerLink="home/welcome">
+    <a class="navbar-brand" routerLink="home/welcome">
       <img [src]="data.logoImageName" class="logo">
     </a>
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-   <!--  <ul class="navbar-nav">
-      <div class="searchBox">
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline- my-2 my-sm-0" type="submit"><i class="fa fa-search text-white"></i>
-          </button>
-        </form>
-      </div>
-    </ul> -->
     <div class="navbar-collapse collapse justify-content-end">
       <ul class="navbar-nav">
-        <li><a routerLink="product/shopping" class="nav-link navText" href="#">Cart<span class="badge badge-light"></span>
-            {{this.sharedService.addToQty()}}</a>
-        </li>
-        <li class="dropdown" *ngIf="this.sharedService.getLogin()">
-  <a class="nav-link navText" (click)="navBarShow()" data-toggle="dropdown">{{this.sharedService.findName()}}<span
-              class="fa fa-angle-down"></span></a>
-          <ul class="dropdown-menu megaMenu" role="menu"
-           [ngClass]="{show: dropdownShow}">
-            <li class="nav-item">
-              <a class="nav-link navText" (click)="navBarShow()" 
-              routerLink="/account/profile">Profile</a>
+        <div class="row">
+          <li class="dropdown" *ngIf="this.sharedService.getLogin()">
+            <a class="havai" (click)="navBarShow()" data-toggle="dropdown">
+              <h5 class="navMail" style="padding-top:10px;"><b
+                  style="margin-bottom: 50px;">{{this.sharedService.findName()}}</b></h5><span
+                class="fa fa-angle-down"></span>
+            </a>
+            <ul class="dropdown-menu megaMenu" role="menu" [ngClass]="{show: dropdownShow}">
+              <li class="nav-item">
+                <a class="navTexts" (click)="navBarShow()" routerLink="/account/profile">
+                  <h6>Profile</h6>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navTexts" (click)="navBarShow()" routerLink="/account/listaddress">
+                  <h6>Address</h6>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navTexts" (click)="navBarShow()" routerLink="/account/listcard">
+                  <h6>Card</h6>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navTexts" (click)="navBarShow()" routerLink="/account/bookings">
+                  <h6>My Bookings</h6>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navTexts" (click)="logOut()">
+                  <h6>LogOut</h6>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <div class="logIns">
+            <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
+              <a class="nav-link navText" routerLink="/home/buyinbulk" style="color: rgb(0, 0, 0);"><b>Buy in
+                  Bulk</b></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link navText" (click)="navBarShow()" 
-              routerLink="/account/listaddress">Address</a>
+          </div>
+          <div class="logIns">
+            <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
+              <a class="nav-link navText" routerLink="/home/support" style="color: rgb(0, 0, 0);"><b>Support</b></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link navText" (click)="navBarShow()" 
-              routerLink="/account/listcard">Card</a>
+          </div>
+          <div class="logIns">
+            <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
+              <a class="nav-link navText" routerLink="/account/signin" style="color: rgb(0, 0, 0);"><b>Login</b></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link navText" (click)="navBarShow()" 
-              routerLink="/account/bookings">My Bookings</a>
+          </div>
+          <div class="logIn" style="margin-right: 50px;">
+            <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
+              <a class="nav-link navText" routerLink="/account/registration"
+                style="color: rgb(0, 0, 0);"><b>SignUp</b></a>
             </li>
-            <li class="nav-item" >
-              <a class="nav-link navText"(click)="logOut()">LogOut</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
-          <a class="nav-link navText" routerLink="/account/signin">Login</a>
-        </li>
-        
-        <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
-          <a class="nav-link navText" routerLink="/account/registration">SignUp</a>
-        </li>
+          </div>
+          <div class="shop" >
+              <li><a routerLink="product/shopping" class="nav-link navText" href="#">
+                  <mat-icon matBadge="{{this.sharedService.addToQty()}}" matBadgeColor="warn">shopping_cart</mat-icon>
+                  <span class="badge badge-light"></span>
+                  <!--   {{this.sharedService.addToQty()}} -->
+                </a>
+              </li>
+            </div>
+        </div>
       </ul>
     </div>
   </div>
-</nav> 
+</nav>
 <app-category></app-category>
-
 

@@ -10,12 +10,13 @@ import { SeoService } from './seo/seo.service';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { SharedRoutingModule } from './shared/shared-routing.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule, MatCardModule
+import {MatInputModule, MatCardModule, MatIconModule
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FooterComponent} from './shared/footer/footer.component';
 import {NavComponent} from './shared/nav/nav.component';
 import {CategoryComponent} from './shared/category/category.component';
+import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,8 @@ import {CategoryComponent} from './shared/category/category.component';
     MatInputModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatBadgeModule,
+    MatIconModule
   ],
   providers: [SeoService],
   bootstrap: [AppComponent]

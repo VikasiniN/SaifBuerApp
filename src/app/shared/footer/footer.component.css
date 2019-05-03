@@ -22,3 +22,12 @@
   a{
       text-decoration: none;
   }
+  .imgTele{
+    width: 15px;
+    padding: 2px;
+  }
+  .imgTel{
+    width: 28px;
+    color: red;
+  
+  }

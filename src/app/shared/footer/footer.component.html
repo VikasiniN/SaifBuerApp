@@ -77,29 +77,28 @@
         <div class="footers-info mt-3">
           <p>{{data.address}}</p>
           <ul class="list-unstyled">
-            <li><a href="maintenance.html"><span><i class="fa fa-phone"
-                    aria-hidden="true"></i></span>{{data.contactNo}}</a></li>
-            <li><a href="contact.html"><span><i class="fa fa-phone"
-                    aria-hidden="true"></i></span>{{data.alternativeContactNo}}</a></li>
-            <li><a href="about.html"><span><i class="fa fa-envelope" aria-hidden="true"></i></span>{{data.mailId}}</a>
+            <li><a href="maintenance.html"> <img src="../../../assets/img/telephone.png" class="imgTele"> {{data.contactNo}}</a></li>
+            <li><a href="contact.html"> <img src="../../../assets/img/telephone.png" class="imgTele"> {{data.alternativeContactNo}}</a></li>
+            <li><a href="about.html"> <img src="../../../assets/img/envelope.png" class="imgTele"> {{data.mailId}}</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="col-xs-12 col-6 col-md-2">
         <h6>About Us</h6>
-        <ul class="list-unstyled">
+        <!-- <ul class="list-unstyled">
           <li><a href="maintenance.html">About Us</a></li>
-          <li><a href="contact.html">Partner with us</a></li>
+      
           <li><a href="about.html">Terms & Conditions</a></li>
-        </ul>
+        </ul> -->
       </div>
       <div class="col-xs-12 col-6 col-md-2">
         <h6>Information </h6>
         <ul class="list-unstyled">
-          <li><a href="maintenance.html">Order</a></li>
-          <li><a href="contact.html">Delivery</a></li>
-          <li><a href="about.html">Call us</a></li>
+            <li><a routerLink="/home/contact">Contact</a></li>
+          <li><a routerLink="/home/privacypolicy">Privact Policy</a></li>
+          <li><a routerLink="/home/termsandconditions">Terms & Use</a></li>
+          <li><a routerLink="/home/faq">FAQ</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-6 col-md-2">
@@ -113,12 +112,12 @@
       </div>
       <div class="col-xs-12 col-6 col-md-2">
         <h6>Social Media </h6>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled" style="margin-top: 15px;">
           <li>
-            <a class="pr-2" [attr.href]="data?.facebookLink" target="_blank" ><i class="fa fa-facebook-square fa-2x social"></i></a>
-            <a class="pr-2" [attr.href]="data?.googlePlusLink" target="_blank"><i class="fa fa-twitter-square fa-2x social"></i></a>
-            <a class="pr-2" [attr.href]="data?.twitterLink" target="_blank"><i class="fa fa-google-plus-square fa-2x social"></i></a>
-            <a class="pr-2" [attr.href]="data?.pintrestLink" target="_blank"><i class="fa fa-pinterest  fa-2x social"></i></a>
+            <a class="pr-2" [attr.href]="data?.facebookLink" target="_blank" ><img src="../../../assets/img/facebook-logo.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.googlePlusLink" target="_blank"><img src="../../../assets/img/twitter-logo.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.twitterLink" target="_blank"><img src="../../../assets/img/google-plus-symbol.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.pintrestLink" target="_blank"><img src="../../../assets/img/pinterest-logo.png"  class="imgTel"></a>
         </ul>
       </div>
 

@@ -11,9 +11,17 @@ import { StripComponent } from './strip/strip.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import {HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
+import { AdsComponent } from './ads/ads.component';
+import { SupportComponent } from './support/support.component';
+import { BuyInBulkComponent } from './buy-in-bulk/buy-in-bulk.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
-  declarations: [BannerComponent, CategoryContentComponent, FooterComponent, ProductComponent, Promotion1Component, Promotion2Component, ReviewComponent, StripComponent, SubscribeComponent, HomeComponent],
+  declarations: [BannerComponent, CategoryContentComponent, FooterComponent, ProductComponent, Promotion1Component, Promotion2Component,
+     ReviewComponent, StripComponent, SubscribeComponent, HomeComponent, AdsComponent, SupportComponent, BuyInBulkComponent, ContactUsComponent, PrivacyPolicyComponent, TermsAndConditionsComponent, FaqComponent],
   imports: [
     CommonModule,
     HomeRoutingModule 

@@ -16,6 +16,7 @@ export class BannerComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router, private homeService: HomeService) { }
   ngOnInit() {
     this.getBannersDetails();
+
   }
 
   minusSlides(n) {
@@ -32,6 +33,8 @@ export class BannerComponent implements OnInit {
     } else {
       this.slideIndex = ++n;
     }
+
+
   }
   getBannersDetails() {
     this.homeService.getAllBanner().subscribe(data => {

@@ -1,6 +1,6 @@
-.logo{
+.img-responsive{
     width: 160px;
-    height: 30px;
+    height: 40px;
 }
 a{
   
@@ -10,10 +10,11 @@ a{
 .nav-item{
     color: rgb(90, 5, 65);
 }
-
-.navbar-nav1 {
-    padding-left: 750px;
+.logo{
+  height: 40px;
+ /*  padding-left: 18px; */
 }
+
 
 @media (max-width: 600px) {
 .logo{
@@ -29,9 +30,7 @@ a{
 @media screen and (min-width: 600px)
  {
  
-.navbar-nav{
-    padding-left: 500px;
-} 
+
 }
 
 .selected {
@@ -40,9 +39,57 @@ a{
     
   }
   .bg-light {
-  background-color: #f5f5f5!important;
+  background-color: rgb(255, 255, 255)!important; 
+  box-shadow: 0 1px 3px 0 #0000004f, 0 5px 58px 0 rgba(0, 0, 0, .19);
+
+
 }
 
-/* .navbar-nav{
-    padding-left: 420px;
-} */
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+.logIn{
+  
+
+    margin-right: 30px; 
+}
+.logIns{
+
+    margin-right: 10px;
+    color: rgb(201, 10, 10);
+}
+.shop{
+    margin-right: 20px;
+}
+.navMail{
+    color: rgb(238, 25, 25); 
+    font-weight:600;
+    font-size: 16px;
+}
+
+.dropdown .li{
+
+
+  color: rgb(189, 3, 3) !important;
+  text-decoration: none;
+  background-color: #c9c9c9 !important;
+  box-shadow: 0 1px 3px 0 #0000004f, 0 0px 88px 0 rgba(0, 0, 0, .19);
+  border: 8px;
+  border-radius: 5px;
+  font-weight: 800;
+  text-align: center;
+  
+
+}
+h6:hover{
+  color: rgb(219, 10, 10);
+   background:rgb(158, 158, 158);
+  box-shadow: 0 1px 8px 0 #0000004f, 0 0px 88px 0 rgba(0, 0, 0, .19);
+  text-align: center;
+
+}
+
+.navTexts{
+    color: #aa0a0a;
+}

@@ -7,10 +7,28 @@
         <div class="promoImg" >
         <img [src]="data?.productImageName[0]"  class="img-responsive">
       </div>
-        <b >{{data.productName}}</b>
+      <h6 class="proName">  {{data.productName}}</h6>
         <br>
        <h6>₹ {{data.price}}  </h6>
       </div>
     </div>
   </div>
 </div>
+
+<!-- <div *ngFor="let promotion of promotionsModel">
+  <h3 class="our-h1">
+    {{promotion.promotionTitle}}
+  </h3>
+  <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2 col-8" *ngFor="let data of promotion.joinedtable">
+          <div *ngIf="slideIndex === i">
+          <img [src]="data.productImageName[0]" class="img-responsive">
+        </div>
+          <div class="h1H">
+          {{data.productName}}
+        </div>
+        <h6>₹ {{data.price}}</h6>
+  </div>
+  <div class="col-md-1"></div>
+  </div> -->
