@@ -7,6 +7,9 @@ import {Banner} from './banner/banner.model';
 import {SuperCategory} from './category-content/category.model';
 import {Footer} from './footer/footer.model';
 import {Promotion} from './promotion1/promotion.model';
+import {PrivacyPolicy} from './privacy-policy/privacy-policy.model';
+import {FAQ} from './faq/faq.model';
+import {TermsUse} from './terms-and-conditions/termsuse.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -46,6 +49,42 @@ export class HomeService {
   getPromotions(): Observable<any> {
     const categoryUrl = 'promotions';
     const url: string = this.serviceUrl + categoryUrl;
+    return this.httpClient.get<Promotion>(url);
+  }
+
+  // support us
+
+  getSupportUs(): Observable<any> {
+    const categoryUrl = 'supportDetails';
+    const url: string = this.serviceUrl + categoryUrl;
     return this.httpClient.get<Footer>(url);
   }
+
+  // contact us
+  getContactUs(): Observable<any> {
+    const categoryUrl = 'contactDetails';
+    const url: string = this.serviceUrl + categoryUrl;
+    return this.httpClient.get<Footer>(url);
+  }
+
+  // get privacy policy
+  getPrivacyPolicy(): Observable<any> {
+    const categoryUrl = 'privacypolicy';
+    const url: string = this.serviceUrl + categoryUrl;
+    return this.httpClient.get<PrivacyPolicy>(url);
+  }
+
+  // get faq
+  getFAQ(): Observable<any> {
+    const categoryUrl = 'faq';
+    const url: string = this.serviceUrl + categoryUrl;
+    return this.httpClient.get<FAQ>(url);
+  }
+
+    // get terms and use
+    getTermsAndUSe(): Observable<any> {
+      const categoryUrl = 'termsanduse';
+      const url: string = this.serviceUrl + categoryUrl;
+      return this.httpClient.get<TermsUse>(url);
+    }
 }

@@ -1,4 +1,11 @@
-<p>
-  support works!
-</p>
-<!-- refer royaloak furniture -->
+<div class="container" *ngFor="let data of supportModel">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="support">Support</h1>
+<br>
+      <h5 style="font-size: 15px; font-weight: 200;"> <b>Email:</b> {{data.emailId}}
+   <h6 style="font-size: 14;font: weight 100;"> call/whatsApp: <img src="../../../assets/img/whatsapp (2).png" class="img-fluid">+{{data.whatsappNumber}} ({{data.openTimings}})</h6>
+  </h5>
+    </div>
+  </div>
+</div>

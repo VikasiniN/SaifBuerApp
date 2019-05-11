@@ -17,4 +17,6 @@ export class Order {
       mobileNumber: string;
    }];
    orderStatus: string;
+   orderId: string;
+   totalpriceValue: any;
 }

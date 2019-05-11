@@ -1,3 +1,47 @@
-<p>
-  faq works!
-</p>
+
+<br>
+<div class="container" > 
+
+<div class="spAse">
+
+<h1 class="fAq">FAQ</h1>
+<div *ngFor="let data of faqModel">
+  <h5 class="aboUt">{{data.faqHeading}}</h5>
+  <div *ngFor="let val of data.faqDetails">
+      <h6 class="hSix">{{val.faqQuestion}}</h6> 
+      <p  class="liNes">{{val.faqAnswers}}</p> </div>
+</div>
+
+<!-- <h5 class="aboUt">About Orders</h5> -->
+<!-- <h6 class="hSix">1.Do you accept bulk orders ?</h6>
+<p class="liNes">As of now no. However, you can mention the quantity while sending the inquiry. We will reply to you with the feasibility of same.Please note that the maximum order of same collection cannot go beyond 5.</p>
+<h6  class="hSix">2.Can I cancel/change my order ?</h6>
+<p  class="liNes">Yes you can cancel the order before the shipment has left us. After which it wouldn’t be possible.However once an order
+ is placed and payment is done, changing the order will not be possible.</p>
+<h6  class="hSix">3.How do I know my order is placed ?</h6>
+<p  class="liNes">On receipt of payment we will send you a confirmation email.</p>
+<h6  class="hSix">4.What are the mode of payments.</h6>
+<p  class="liNes">You can transfer the amount through net banking. If in some scenario where you are unable to do so, you can deposit a cheque to our account.</p>
+<h6  class="hSix">5.Why don’t you accept COD (Cash on delivery) ?</h6>
+<p  class="liNes">We think bank transactions are easier and fool proof for both customers and us. A bank transaction is proof of payment made and hence your money is safe.</p>
+  
+</div>
+<br>
+<h5 class="aboUt">Return Policy</h5>
+<h6  class="hSix">1.How do I return my product ?</h6>
+<p  class="liNes">We do not accept returns unless an item in your package has been damaged/broken
+   during transit. In such a scenario, on receipt of the package you need to email us 
+   within 48 hours. A clear picture of the damaged/broken product needs to be attached to the mail.
+    After verifying the same we will ship you a fresh replacement for the damaged product. Note: 
+    Imperfections in products as mentioned earlier will not to be considered as damage.</p>
+<h6  class="hSix">2.How soon can I receive the order ?</h6>
+<p  class="liNes">We ship our products every Wednesday and Saturday. After which our courier partne
+  should deliver them to you within 7 working days. Upon dispatch, we will email the courier name and 
+  tracking details via email for you to refer.</p>
+<h6  class="hSix">3.Is there any additional shipping charge ?</h6>
+<p  class="liNes">We may charge a small shipping fee based on the product and the delivery address.</p>
+<h6 class="hSix">4.Why do you dispatch only two days ?</h6>
+<p  class="liNes">Since many of our products are fragile, we do that to ensure proper packaging and shipment to you.</p>
+<h6 class="hSix">5.Do you ship internationally ?</h6>
+<p  class="liNes">Currently international shipping is not supported. We only ship in Bangalore.</p> -->
+</div>

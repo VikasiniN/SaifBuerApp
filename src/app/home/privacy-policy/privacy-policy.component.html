@@ -1,3 +1,52 @@
-<p>
-  privacy-policy works!
-</p>
+<div class="poliCy">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" *ngFor="let data of privayModel">
+            <h1 class="support">PRIVACY POLICY</h1>
+            <p class="stYle">{{data.policyHeading}} </p>
+            <div *ngFor ="let val of data.policies">
+              <h6 class="hsiX" >{{val.policyQuestion}} </h6>
+              <p class="priVacy" >{{val.policyAnswers}} </p>
+            </div >
+           
+
+           <!--  <p class="priVacy">We collects basic information required to service your requests, including your name,
+              mailing address, email and phone number. This information is gathered when you purchase products/gift
+              certificates, or sign up for email notifications. Your card information is request only when you place an
+              order and is submit via the highest level of encryption to make sure the greatest amount of safety and
+              security. </p> -->
+
+          <!--   <h6 class="hsiX"> Why Do We Collect This Information? </h6>
+            <p class="priVacy">The primary reason we gather information is for order processing, shipping and customer
+              service. For example, we may contact you to provide an update on your purchase, information regarding the
+              shipping status or to clarify questions related to your Purchase. Also to provide customers a customized
+              shopping experience/to notify them on updates, new activities, latest contents available on the website,
+              special offers, schemes, other products/services. Along with that use this information to improve our
+              products, services, website content and navigation. </p>
+
+            <h6 class="hsiX">With whom your information will be shared: </h6>
+            <p class="priVacy">SofaCreator will not use your personal information for any purpose other than to complete a
+              transaction with you. SofaCreator does not rent, sell or share your personal information and will not
+              disclose any of your personally identifiable information to third parties. In cases where it has your
+              permission to provide products or services you've requested and such information is necessary to provide
+              these products or services the information may be shared with SofaCreator in-house team. </p>
+
+            <p class="priVacy">We keep data of your previous transactions and orders including product, price, date of
+              purchase, payment and transaction history etc. </p>
+
+            <h6 class="hsiX"> Policy updates</h6>
+            <p class="priVacy"> Our privacy policy is subject to change regularly/periodically, without notice. To
+              ensure the updates on changes, kindly review the privacy policy periodically. This privacy policy doesn't
+              apply to any of our business partners/franchisee/associates or other third parties. Kindly review the
+              privacy policy of other parties with whom you may interact. </p> -->
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

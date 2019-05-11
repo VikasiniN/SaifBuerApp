@@ -149,7 +149,7 @@ inventoryUpdate(orderdetails: Order): Observable<Order>  {
 // booking
 
 // tslint:disable-next-line: adjacent-overload-signatures
- placeBooking(orderdetails: Booking): Observable<Order>  {
+ placeBooking(orderdetails: Booking): Observable<Booking>  {
   const cartUrl = 'booking/';
   const url: string = this.serviceUrl + cartUrl;
   return this.httpClient.post<Booking>(url, orderdetails);

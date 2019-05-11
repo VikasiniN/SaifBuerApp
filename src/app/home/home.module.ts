@@ -51,10 +51,11 @@ import {
   MatTabsModule,
   MatSliderModule
 } from '@angular/material';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [BannerComponent, CategoryContentComponent, FooterComponent, ProductComponent, Promotion1Component, Promotion2Component,
-     ReviewComponent, StripComponent, SubscribeComponent, HomeComponent, AdsComponent, SupportComponent, BuyInBulkComponent, ContactUsComponent, PrivacyPolicyComponent, TermsAndConditionsComponent, FaqComponent],
+     ReviewComponent, StripComponent, SubscribeComponent, HomeComponent, AdsComponent, SupportComponent, BuyInBulkComponent, ContactUsComponent, PrivacyPolicyComponent, TermsAndConditionsComponent, FaqComponent, AboutUsComponent],
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule,
     HomeRoutingModule,

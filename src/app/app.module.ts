@@ -17,13 +17,15 @@ import {FooterComponent} from './shared/footer/footer.component';
 import {NavComponent} from './shared/nav/nav.component';
 import {CategoryComponent} from './shared/category/category.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import {StripsComponent} from './shared/strips/strips.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddSeoComponent,
     FooterComponent,
     NavComponent,
-    CategoryComponent
+    CategoryComponent,
+    StripsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'seo'}),

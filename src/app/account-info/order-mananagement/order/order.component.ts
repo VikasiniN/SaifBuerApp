@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from './../../account.service';
-import { Order } from './../../../shared/model/order.model';
+import { Booking } from './../../../shared/model/booking.model';
 
 @Component({
   selector: 'app-order',
@@ -9,7 +9,7 @@ import { Order } from './../../../shared/model/order.model';
 })
 export class OrderComponent implements OnInit {
   userId: string;
-  order: Order;
+  order: Booking;
   constructor(private accountService: AccountService) { }
 
   ngOnInit() {

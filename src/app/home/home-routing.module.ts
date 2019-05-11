@@ -8,6 +8,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { SupportComponent } from './support/support.component';
 import { FaqComponent } from './faq/faq.component';
+import {AboutUsComponent} from './about-us/about-us.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
   },
   {
     path: 'faq', component: FaqComponent,
+  }
+  ,
+  {
+    path: 'aboutus', component: AboutUsComponent,
   }
 ];
 

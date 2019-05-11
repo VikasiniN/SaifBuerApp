@@ -4,6 +4,7 @@ import { NavComponent } from './nav/nav.component';
 import { Routes, RouterModule } from '@angular/router';
 import {SharedRoutingModule} from './shared-routing.module';
 import { FooterComponent } from './footer/footer.component';
+import {StripsComponent} from './strips/strips.component';
 import {
   MatSidenavModule,
   MatListModule,

@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
   header: Header[];
   logoImage: string;
 email;
-  constructor(private sharedService: SharedService, private router: Router) { }
+  constructor(public sharedService: SharedService, private router: Router) { }
 
   ngOnInit() {
     this.logo();

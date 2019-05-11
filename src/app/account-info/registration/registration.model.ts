@@ -12,5 +12,6 @@ export class RegModel {
     gender: string;
     addressDetails: [AddressModel];
     cardDetails: [CardDetailModel];
+    result: any;
     /* ProfileModels: [ProfileModel]; */
 }

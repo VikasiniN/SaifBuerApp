@@ -1,0 +1,19 @@
+.abouTus{
+    padding: 10px;
+    max-lines: 10px;
+    line-height: 30px;
+}
+.coMpany{
+    color: darkred;
+    font-family: open;
+}
+.best{
+  margin-top: 17px;
+    color: darkred; 
+   /*  font-family: open; */
+   padding: 10px;
+}
+b{
+    color: darkred;
+    font-weight: 100px;
+}

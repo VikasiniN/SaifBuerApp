@@ -1,0 +1,43 @@
+.img-fluid{
+    /*    height: 400px;
+        width:1000px; */
+      /*   padding-left: 50px; */
+     box-shadow: 0 1px 10px 0 #8a888863, 0 0px 0px 0 rgba(136, 136, 136, 0.19);
+   
+       }
+       .textOne{
+           padding-left: 425px;
+           font-family: open;
+           font-size: 35px;
+       }
+       .explore-h3 {
+           margin-top: 100%;
+           margin-bottom: 10px;
+         }
+         
+         h3 {
+           display: flex;
+           width: 990px;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           padding-left: 200px;
+           font-family: Open;
+           color: darkred;
+         padding-top: 10px;    
+           margin-bottom: 20px;
+   
+         
+         }
+         
+         h3:before,
+         h3:after {
+           content: '';
+           border-top: 1px solid;
+           margin: 0 20px 0 0;
+           flex: 1 0 20px;
+         }
+         
+         h3:after {
+           margin: 0 0 0 20px;
+         }
