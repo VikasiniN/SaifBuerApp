@@ -13,7 +13,12 @@ const routes: Routes = [
   {
     path: 'account',
     loadChildren: './account-info/account-info.module#AccountInfoModule'
-  }
+  },
+  {
+    path: '',
+    redirectTo: '/home/welcome',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

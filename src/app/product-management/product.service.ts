@@ -18,7 +18,7 @@ export class ProductService {
   mainServiceUrl: string;
 
   constructor(private httpClient: HttpClient) {
-    this.mainServiceUrl = AppSetting.mainServiceUrl;
+    /* this.mainServiceUrl = AppSetting.mainServiceUrl; */
   }
 // moq
 

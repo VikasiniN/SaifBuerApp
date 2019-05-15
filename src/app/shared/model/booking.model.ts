@@ -20,4 +20,5 @@ export class Booking {
    orderStatus: string;
    bookingStatus: string;
 bookingDate: Date;
+orderId: string;
 }

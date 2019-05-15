@@ -1,51 +1,18 @@
-
+<form [formGroup]="regForm" (ngSubmit)="!regForm.invalid && onSubmit()" novalidate style="padding-top:40px">
     <div class="contai">
       <div class="row">
         <div class="col-md-4">
           <div class="coNtact">
           <h1 class="blue"> Bulk Buyer</h1>
           <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod odio itaque corrupti ducimus dolore voluptas iusto. Nam quia rerum nesciunt, excepturi ex ut eveniet similique fuga repudiandae, consequuntur amet!.</p>
-          <!-- <div class="row">
-              <div class="col-md-6">
-                <div class="name">
-                <h3> Email Address *</h3>
-                </div>
-    <br>
-                <div class="name" >
-                  <input type="text" class="form-control" placeholder="Enter Email Address" id="usr" name="Email"
-                    style="width:250px; height: 50px ;">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="name" >
-                <h3>Password *</h3>
-                </div>
-                <br>
-                <div class="name">
-                  <input type="text" class="form-control" placeholder="Enter Password:" id="usr" name="Email"
-                    style="width:250px; height: 50px ;">
-                </div>
-              </div>
-            </div> -->
         </div>
         </div>
-    
-
-
-
-
-
-
-
         <div class="col-md-8" style="padding-left: 110px;">
-
-
-          
           <div class="container">
-            <h1 class="blue">Register & Get Additional Discounts</h1>
+            <h1 class="blue">Register</h1>
             <br>
             <div class="row">
-              <div class="col-md-3" >
+              <!-- <div class="col-md-3" >
                 <div class="nameZs" style="padding-bottom: 15px;">
                   <h6 >Full Name *</h6>
                 </div>
@@ -65,33 +32,85 @@
 
                 <br>
             
-              </div>
+              </div> -->
               <div class="col-md-9">
                 <div class="nameS" >
-                  <input type="text" class="form-control" placeholder="Enter Full Name:" id="usr" name="Email"
-                   >
+                    <div class="col-md-12">
+                    <mat-form-field >
+                        <mat-label>Your Full Name</mat-label>
+                        <input matInput placeholder="Full Name" formControlName="fullName" required>
+                        <button mat-button matSuffix mat-icon-button aria-label="email">
+                            <mat-icon> person_pin</mat-icon>
+                        </button>
+                        <mat-error *ngIf="regForm.controls['fullName'].errors?.required">
+                          Full Name is
+                              <strong>required</strong>
+                            </mat-error>
+                      </mat-form-field>
+                      </div>
                 </div>
            
                 <div class="nameS">
-                  <input type="text" class="form-control" placeholder="Enter Mobile Number:" id="usr" name="Email"
-                   >
+                    <div class="col-md-12">
+                   <mat-form-field >
+                      <mat-label>Your Mobile Number</mat-label>
+                      <input matInput placeholder="Mobile Number" formControlName="mobileNumber" required>
+                      <button mat-button matSuffix mat-icon-button aria-label="email">
+                          <mat-icon>phone</mat-icon>
+                      </button>
+                      <mat-error *ngIf="regForm.controls['mobileNumber'].errors?.required">
+                          Mobile Number is
+                            <strong>required</strong>
+                          </mat-error>
+                    </mat-form-field>
+                    </div>
                 </div>
                 <div class="nameS">
-                    <input type="text" class="form-control" placeholder="Enter Your Email Adders:" id="usr" name="Email"
-                    >
+                    <div class="col-md-12">
+                    <mat-form-field >
+                        <mat-label>Your Email Address</mat-label>
+                        <input matInput placeholder="Email Address" formControlName="emailId" required>
+                        <button mat-button matSuffix mat-icon-button aria-label="email">
+                          <mat-icon>email</mat-icon>
+                        </button>
+                        <mat-error *ngIf="regForm.controls['emailId'].errors?.required">
+                           Email ID is
+                             <strong>required</strong>
+                           </mat-error>
+                      </mat-form-field>
+                      </div>
                   </div>
                   <div class="nameS">
-                      <input type="text" class="form-control" placeholder="Enter Password:" id="usr" name="Email"
-                        >
+                      <div class="col-md-12">
+                      <mat-form-field >
+                          <mat-label>Your City</mat-label>
+                          <input matInput placeholder="City" formControlName="city" required>
+                          <button mat-button matSuffix mat-icon-button aria-label="email">
+                              <mat-icon>location_city</mat-icon>
+                          </button>
+                          <mat-error *ngIf="regForm.controls['city'].errors?.required">
+                             City is
+                              <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                      </div>
                     </div>
-                                                                                      
+                    <div class="nameS">
+                        <div class="col-md-12">
+                        <mat-form-field >
+                            <mat-label>Product Details</mat-label>
+                           <textarea matInput placeholder="Product Details" formControlName="products"> </textarea>
+                          </mat-form-field>
+                        </div>
+                      </div>                                                          
               </div>
             </div>
 
     <div class="buu">
-              <input type="button" class="button" value="Submit">
+        <button class="button" mat-stroked-button  type="submit">Submit</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </form>
