@@ -1,81 +1,12 @@
-<!-- <div class="container-fluid footers pt-5">
-  <div class="container">
-    <div class="row footerBorder">
-      <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let data of footerDetails">
-
-        <div>
-          <img [src]="data.logoImageName" style="width:180px" alt="Logo" class="img-fluid">
-        </div>
-        <div class="footers-info mt-3">
-          <ul class="list-unstyled">
-            <li>
-              <a href="maintenance.html">
-                <span>
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                </span>
-              </a>
-            </li>
-            <li><a href="contact.html">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li><a href="about.html"><span><i class="fa fa-envelope" aria-hidden="true"></i></span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-xs-12 col-6 col-md-2">
-        <h6>About Us</h6>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">About Us</a></li>
-          <li><a href="contact.html">Partner with us</a></li>
-          <li><a href="about.html">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-6 col-md-2">
-        <h6>Information </h6>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">Order</a></li>
-          <li><a href="contact.html">Delivery</a></li>
-          <li><a href="about.html">Call us</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-6 col-md-2">
-        <h6>Explore </h6>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">News</a></li>
-          <li><a href="contact.html">Sitemap</a></li>
-
-          <li><a href="about.html">Feedbacks</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-6 col-md-2">
-        <h6>Social Media </h6>
-        <ul class="list-unstyled">
-          <li>
-            <a class="pr-2" [attr.href]="data?.facebookLink" target="_blank"><i
-                class="fa fa-facebook-square fa-2x social"></i></a>
-            <a class="pr-2" [attr.href]="data?.googlePlusLink" target="_blank"><i
-                class="fa fa-twitter-square fa-2x social"></i></a>
-            <a class="pr-2" [attr.href]="data?.twitterLink" target="_blank"><i
-                class="fa fa-google-plus-square fa-2x social"></i></a>
-            <a class="pr-2" [attr.href]="data?.pintrestLink" target="_blank"><i class="fa fa-pinterest  fa-2x social"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<div class="container-fluid footers pt-5">
-  <div class="container">
+<div class="container-fluid footers pt-5"  >
+  <div class="container" >
     <div class="row footerBorder" *ngFor="let data of footerDetails">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
         <div>
-          <img [src]="data.logoImageName" style="width:180px" alt="Logo" class="img-fluid">
+          <img [src]="data.logoImageName"  alt="Logo" class="footerLogos">
         </div>
         <div class="footers-info mt-3">
-          <p>{{data.address}}</p>
+          <p class="footerAdres">{{data.address}}</p>
           <ul class="list-unstyled">
             <li><a href="maintenance.html"> <img src="../../../assets/img/telephone.png" class="imgTele"> {{data.contactNo}}</a></li>
             <li><a href="contact.html"> <img src="../../../assets/img/telephone.png" class="imgTele"> {{data.alternativeContactNo}}</a></li>
@@ -85,39 +16,40 @@
         </div>
       </div>
       <div class="col-xs-12 col-6 col-md-2">
-        <h6>The Company</h6>
+        <h6 class="footerTopic">The Company</h6>
         <ul class="list-unstyled">
-          <li><a  routerLink="/home/aboutus">About Us</a></li>
+          <li><a  routerLink="/home/aboutus" class="footerSubtitle">About Us</a></li>
       <!-- 
           <li><a href="about.html">Terms & Conditions</a></li> -->
         </ul>
       </div>
       <div class="col-xs-12 col-6 col-md-2">
-        <h6>Information </h6>
+        <h6 class="footerTopic">Information </h6>
         <ul class="list-unstyled">
-            <li><a routerLink="/home/contact">Contact</a></li>
-          <li><a routerLink="/home/privacypolicy">Privacy Policy</a></li>
-          <li><a routerLink="/home/termsandconditions">Terms & Use</a></li>
-          <li><a routerLink="/home/faq">FAQ</a></li>
+            <li><a routerLink="/home/contact" class="footerSubtitle">Contact</a></li>
+          <li><a routerLink="/home/privacypolicy" class="footerSubtitle">Privacy Policy</a></li>
+          <li><a routerLink="/home/termsandconditions" class="footerSubtitle">Terms & Use</a></li>
+          <li><a routerLink="/home/faq" class="footerSubtitle">FAQ</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-6 col-md-2">
-        <h6>Explore </h6>
+        <h6 class="footerTopic" class="footerTopic">Explore </h6>
         <ul class="list-unstyled">
-          <li><a href="maintenance.html">News</a></li>
-          <li><a href="contact.html">Sitemap</a></li>
+          <li>News</li>
+          <li>Sitemap</li>
 
-          <li><a href="about.html">Feedbacks</a></li>
+          <li>Feedbacks</li>
         </ul>
       </div>
       <div class="col-xs-12 col-6 col-md-2">
-        <h6>Social Media </h6>
+        <h6 class="footerTopic">Social Media </h6>
         <ul class="list-unstyled" style="margin-top: 15px;">
           <li>
-            <a class="pr-2" [attr.href]="data?.facebookLink" target="_blank" ><img src="../../../assets/img/facebook-logo.png"  class="imgTel"></a>
-            <a class="pr-2" [attr.href]="data?.googlePlusLink" target="_blank"><img src="../../../assets/img/twitter-logo.png"  class="imgTel"></a>
-            <a class="pr-2" [attr.href]="data?.twitterLink" target="_blank"><img src="../../../assets/img/google-plus-symbol.png"  class="imgTel"></a>
-            <a class="pr-2" [attr.href]="data?.pintrestLink" target="_blank"><img src="../../../assets/img/pinterest-logo.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.facebookLink" target="_blank" ><img src="../../../assets/img/Social-Media/facebook.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.googlePlusLink" target="_blank"><img src="../../../assets/img/Social-Media/twitter.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.twitterLink" target="_blank"><img src="../../../assets/img/Social-Media/pinterest.png"  class="imgTel"></a>
+            <a class="pr-2" [attr.href]="data?.pintrestLink" target="_blank"><img src="../../../assets/img/Social-Media/google-plus.png"  class="imgTel"></a>
+            <img src="../../../assets/img/footer/SofaCreator-payments.png" class="payMents">
         </ul>
       </div>
 

@@ -35,19 +35,23 @@
   </div>
 </div> -->
 
-<div class="promotion1"> 
-  <h1 class="our-h1"><h3>{{promotionsModel[1]?.promotionTitle}}</h3></h1>
-  <br>
+<div class="promotion-Two">
+  <div class="container-fluid">
+  <div class="nameCoverage">
+      <h3 class="promotionName">{{promotionsModel[1]?.promotionTitle}}</h3>
+  </div>
   <div>
     <div class="row gridImg">
-      <div class="col-md-3 col-3 names" *ngFor="let data of promotionsModel[1]?.joinedtable" >
-        <div class="promoImg" >
-        <img [src]="data?.productImageName[0]"  class="img-responsive">
-      </div>
-      <h6 class="proName">  {{data.productName}}</h6>
-        <br>
-       <h6>₹ {{data.price}}  </h6>
+      <div class="col-md-3 col-3 names" *ngFor="let data of promotionsModel[1]?.joinedtable">
+        <div class="promoImg">
+          <div class="card">
+            <img [src]="data?.productImageName[0]" class="img-responsive">
+          </div>
+        </div>
+        <h6 class="productName"> {{data.productName}}</h6>
+        <h6 class="productPrize">? {{data.price}} </h6>
       </div>
     </div>
   </div>
+</div>
 </div>

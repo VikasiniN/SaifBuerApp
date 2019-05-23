@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 col-12">
-        <h4 class="p-2">
+        <h4 class="proDetail">
           {{productModel?.productName | titlecase}}
         </h4>
       </div>
@@ -13,7 +13,7 @@
       </div>
       <div class="col-md-6 col-6">
         <label style="white-space: pre-line; line-height: 20px" *ngIf="productModel?.price !== ''">
-          ₹ {{productModel?.price}}
+          ? {{productModel?.price}}
         </label>
       </div>
       <div class="col-md-4 col-6">
@@ -44,38 +44,11 @@
       </div>
     </div>
     <div class="row ">
-      <!-- <div class="input-group">
-      Set Quantity
-    <span class="input-group-btn">
-      <button type="button" class="btn btn-default btn-number"
-       (click)="reduceQty(initalVal.value)" [disabled]="setQty === 1" >
-        <span>-</span>
-      </button>
-    </span>
-    <input type="text" [disabled]="true" [(ngModel)]="setQty" formControlName="qty" [value]="initialQty" class="form-control input-number" #initalVal>
-    <span class="input-group-btn">
-      <button type="button" class="btn btn-default btn-number" 
-      (click)="increaseQty(initalVal.value)" >
-        <span>+</span>
-      </button>
-    </span>
-  </div> -->
-
       <div class="col-md-3 col-6">
-        <div class="btnss">
           <div mat-stroked-button class="btn btn-float-right card-footers" (click)="addToCart(productModel)">
             <b>Add to Cart</b>
           </div>
-        </div>
       </div>
-   <!--    <div class="col-md-3 col-6">
-        <div class="btnss">
-          <div class="btn btn-float-right card-footers" (click)="buySingleProducts(productModel._id)">
-            <b>Book Now</b>
-          </div>
-        </div>
-      </div> -->
-
     </div>
   </div>
 </form>

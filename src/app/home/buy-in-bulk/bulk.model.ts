@@ -1,4 +1,4 @@
-export class RegModel {
+export class BulkRegModel {
     mobileNumber: number;
     emailId: string;
     city: string;

@@ -1,47 +1,8 @@
-<!-- 
-  <div  >
-      <nav class="navbar  navbar-expand-lg   border-dark navbar-light bg-light">
-      <div class="logo-img" *ngFor="let data of footerDetails">
-          <a class="navbar-brand">
-            <img [src]="data.logoImageName" class="logo">
-          </a>
-        </div>
-    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse"
-      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" 
-    [ngClass]="{'show': navbarShow}">
-    <div class="navbar-nav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
-          <a class="nav-link navText" routerLink="/account/signin">login</a>
-        </li>
-        <li class="nav-item" *ngIf="this.sharedService.getLogin()">
-            <a class="nav-link navText"(click)="logOut()">logout</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link navText" routerLink="/account/registration">Signup</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link"> <span class="sr-only"></span></a>
-        </li>
-      </ul>
-      </div>
-      </div>
-      </nav>
-  </div> 
-  <app-category></app-category>
- -->
-
-
- <nav class="navbar  navbar-expand-lg   border-dark navbar-light  bg-light">
+<nav class="navbar navbar-expand-lg navbar-light  bg-light">
   <div class="logo-img" *ngFor="let data of footerDetails">
-    <a class="navbar-brand" routerLink="home/welcome">
-      <img [src]="data.logoImageName" class="logo">
-    </a>
+    <a class="navbar-brand" routerLink="home/welcome" >
+      <img [src]="data.logoImageName"  class="navLogo">
+    </a> 
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-collapse collapse justify-content-end">
@@ -49,72 +10,68 @@
         <div class="row">
           <li class="dropdown" *ngIf="this.sharedService.getLogin()">
             <a class="havai" (click)="navBarShow()" data-toggle="dropdown">
-              <h5 class="navMail" style="padding-top:10px;"><b
-                  style="margin-bottom: 50px;">{{this.sharedService.findName()}}</b></h5><span
-                class="fa fa-angle-down"></span>
+              <h5 class="navMail"><b>{{this.sharedService.findName()}}</b></h5>
             </a>
             <ul class="dropdown-menu megaMenu" role="menu" [ngClass]="{show: dropdownShow}">
               <li class="nav-item">
                 <a class="navTexts" (click)="navBarShow()" routerLink="/account/profile">
-                  <h6>Profile</h6>
+                  <h6 class="navMailmenu">Profile</h6>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="navTexts" (click)="navBarShow()" routerLink="/account/listaddress">
-                  <h6>Address</h6>
+                  <h6 class="navMailmenu">Address</h6>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="navTexts" (click)="navBarShow()" routerLink="/account/listcard">
-                  <h6>Card</h6>
+                  <h6 class="navMailmenu" >Card</h6>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="navTexts" (click)="navBarShow()" routerLink="/account/bookings">
-                  <h6>My Bookings</h6>
+                  <h6 class="navMailmenu">My Bookings</h6>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="navTexts" (click)="logOut()">
-                  <h6>LogOut</h6>
+                  <h6 class="navMailmenu">LogOut</h6>
                 </a>
               </li>
             </ul>
           </li>
           <div class="logIns">
-            <li class="nav-item" >
-              <a class="nav-link navText" routerLink="/home/buyinbulk" style="color: rgb(0, 0, 0);"><b>Buy in
+            <li class="nav-item">
+              <a class="navTextmenusss" routerLink="/home/buyinbulk"><b>Buy in
                   Bulk</b></a>
             </li>
           </div>
           <div class="logIns">
-            <li class="nav-item" >
-              <a class="nav-link navText" routerLink="/home/support" style="color: rgb(0, 0, 0);"><b>Support</b></a>
+            <li class="nav-item">
+              <a class="navTextmenusss" routerLink="/home/support"><b>Support</b></a>
             </li>
           </div>
           <div class="logIns">
-            <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
-              <a class="nav-link navText" routerLink="/account/signin" style="color: rgb(0, 0, 0);"><b>Login</b></a>
+            <li class="nav-item">
+              <a class="navTextmenusss" routerLink="/account/signin"><b>Login</b></a>
             </li>
           </div>
-          <div class="logIn" style="margin-right: 50px;">
+          <div class="logIn">
             <li class="nav-item" *ngIf="!this.sharedService.getLogin()">
-              <a class="nav-link navText" routerLink="/account/registration"
-                style="color: rgb(0, 0, 0);"><b>SignUp</b></a>
+              <a class="navTextmenusss" routerLink="/account/registration"><b>SignUp</b></a>
             </li>
           </div>
-          <div class="shop" >
-              <li><a routerLink="product/shopping" class="nav-link navText" href="#">
-                  <mat-icon matBadge="{{this.sharedService.addToQty()}}" matBadgeColor="warn">shopping_cart</mat-icon>
-                  <span class="badge badge-light"></span>
-                  <!--   {{this.sharedService.addToQty()}} -->
-                </a>
-              </li>
-            </div>
+          <div class="shop">
+            <li><a routerLink="product/shopping" class=" navTextmenusss" href="#">
+                <mat-icon matBadge="{{this.sharedService.addToQty()}}" matBadgeColor="warn">shopping_cart</mat-icon>
+                <span class="badge badge-light"></span>
+                <!--   {{this.sharedService.addToQty()}} -->
+              </a>
+            </li>
+          </div>
         </div>
       </ul>
     </div>
   </div>
 </nav>
 <app-category></app-category>
-

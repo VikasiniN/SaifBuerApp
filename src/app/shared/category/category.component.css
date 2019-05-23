@@ -1,77 +1,92 @@
 .selected {
   /*  background-color: rgb(255, 255, 255) !important; */
-   color: rgb(231, 0, 0);
- /*   box-shadow: 0 1px 3px 0 #0000004f, 0 0px 88px 0 rgba(0, 0, 0, .19); */
- 
- }
- 
- .bg-light {
-   background-color: #232323!important; 
- }
- 
- .dropdown-item:active {
-   background-color: #696969 !important;
- }
- 
- .dropdown-item:focus,
- .dropdown-item:hover {
- /*   color: rgb(255, 0, 0) !important; */
-   text-decoration: none;
-   /* background-color: rgb(255, 136, 0)!important;  */
- /*   box-shadow: 0 1px 3px 0 #0000004f, 0 0px 88px 0 rgba(0, 0, 0, .19); */
-   border: 8px;
- /*   border-radius: 5px; */
-   font-weight: 800;
-   float: right;
+  color: rgb(231, 0, 0);
+  /*   box-shadow: 0 1px 3px 0 #0000004f, 0 0px 88px 0 rgba(0, 0, 0, .19); */
+
+}
+
+.bg-light {
+  background-color: #232323 !important;
+  border: 2px solid rgb(134, 23, 23);
+}
+
+.dropdown-item:active {
+  background-color: #696969 !important;
+}
+.categoryMenu{
+  border: #232323 2px solid;
+  width: 100%;
+  height: auto;
+  border-radius: 0px 0px 0px 0px
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  /*   color: rgb(255, 0, 0) !important; */
+  text-decoration: none;
+  /* background-color: rgb(255, 136, 0)!important;  */
+  /*   box-shadow: 0 1px 3px 0 #0000004f, 0 0px 88px 0 rgba(0, 0, 0, .19); */
+  border: 8px;
+  /*   border-radius: 5px; */
+  font-weight: 800;
+  float: right;
   /*  margin-right: 24px; */
-   background:transparent;
-   left:100%;
-   top:0;
-   -webkit-box-shadow:0px 7px 9px rgba(0, 0, 0, 0.40);
-   -moz-box-shadow:0px 7px 9px rgba(0, 0, 0, 0.40);
-   box-shadow:0px 7px 9px rgba(0, 0, 0, 0.40);
-   left:80%;
-   top:0;
-   -webkit-box-shadow:0px 7px 9px rgba(121, 108, 108, 0.932);
-   -moz-box-shadow:0px 7px 9px rgba(0, 0, 0, 0.40);
-   box-shadow:0px 7px 9px rgba(0, 0, 0, 0.40);
- outline: #232323;
- outline-width: 50px;
- 
- 
- }
- .dropdown-item{
-   text-align: center;
- }
- .subMenus{
-   font-size: 15px;
- 
-   color: rgb(255, 255, 255);
- 
- 
- }
- .subMenus:hover{
-   color: rgb(249, 253, 0);
- }
- 
- .color{
-   color: rgb(0, 81, 151);
-   left: 0;
-   position: fixed;
-   transition: all 0.2s linear;
-   right: 0;
- }
+  background: transparent;
+  left: 100%;
+  top: 0;
+  -webkit-box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.40);
+  -moz-box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.40);
+  box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.40);
+  left: 80%;
+  top: 0;
+  -webkit-box-shadow: 0px 7px 9px rgba(121, 108, 108, 0.932);
+  -moz-box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.40);
+  box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.40);
+  outline: #232323;
+  outline-width: 50px;
 
- .whatsApp {
 
+}
+
+.dropdown-item {
+  text-align: center;
+}
+
+.subMenus {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.subMenus:hover {
+  color: rgb(255, 255, 255);
+}
+
+.color {
+  color: rgb(0, 81, 151);
+  left: 0;
+  position: fixed;
+  transition: all 0.2s linear;
+  right: 0;
+}
+
+.whatsApp-icon {
   color: white;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 50px;
   height: 50px;
+  float: right;
 }
-.fixed-top{
-  margin-left: 1620px;
-  margin-top: 69px;
+
+.fixed-top {
+  
+  margin-top: 50px;
+  scroll-margin: inherit 50px red;
+}
+.d-xs-block{
+color: aliceblue;
+font-family: 'Times New Roman', Times, serif;
 }

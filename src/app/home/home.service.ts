@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, fromEventPattern } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { AppSetting } from '../config/appSetting';
 import {Banner} from './banner/banner.model';
@@ -10,6 +10,8 @@ import {Promotion} from './promotion1/promotion.model';
 import {PrivacyPolicy} from './privacy-policy/privacy-policy.model';
 import {FAQ} from './faq/faq.model';
 import {TermsUse} from './terms-and-conditions/termsuse.model';
+import {ContactUs} from './contact-us/contactus.model';
+import {BulkRegModel} from './buy-in-bulk/bulk.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -86,5 +88,21 @@ export class HomeService {
       const categoryUrl = 'termsanduse';
       const url: string = this.serviceUrl + categoryUrl;
       return this.httpClient.get<TermsUse>(url);
+    }
+
+    // contact
+
+    addCustomerContact(prod) {
+      const categoryUrl = 'contactus';
+      const url: string = this.serviceUrl + categoryUrl;
+      return this.httpClient.post<ContactUs>(url, prod);
+    }
+
+    // buy in bulk
+
+    addBuyInBulk(prod) {
+      const categoryUrl = 'bulkregsitration';
+      const url: string = this.serviceUrl + categoryUrl;
+      return this.httpClient.post<BulkRegModel>(url, prod);
     }
 }
