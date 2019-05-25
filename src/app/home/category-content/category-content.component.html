@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-lg-3 col-3 " *ngFor="let category of categoryModel" > 
         <div class="categoryCover">     
-          <img [src]="category.categoryImageName" class="categoryImage ">
+        <a (click)="viewCategoryProduct(category._id)"><img [src]="category.categoryImageName" class="categoryImage "></a>  
         </div>
           <p class="categoryName">{{category.categoryName}}</p>
       </div>

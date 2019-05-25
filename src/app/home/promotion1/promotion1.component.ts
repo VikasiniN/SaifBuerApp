@@ -25,5 +25,5 @@ export class Promotion1Component implements OnInit {
     });
   }
   detailView( val) {
-console.log('id', val);
- }}
+    this.router.navigate(['/product/productview/', val]);
+     }}

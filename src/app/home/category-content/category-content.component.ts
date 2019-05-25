@@ -11,6 +11,7 @@ import {HomeService} from '../home.service';
 })
 export class CategoryContentComponent implements OnInit {
   categoryModel: SuperCategory;
+  categoryType;
 constructor(private fb: FormBuilder, private router: Router, private homeService: HomeService) { }
 
   ngOnInit() {
@@ -23,6 +24,10 @@ constructor(private fb: FormBuilder, private router: Router, private homeService
     }, err => {
       console.log(err);
     });
+  }
+  viewCategoryProduct(id) {
+    this.categoryType = 'super';
+    this.router.navigate([ '/product/type', this.categoryType, 'productlist', id]);
   }
 }
 

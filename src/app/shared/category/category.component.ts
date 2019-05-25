@@ -65,12 +65,15 @@ export class CategoryComponent implements OnInit {
     });
   }
   viewCategory(subcat)   {
+    const cat = 'sub';
     this.selectedDropDown = '';
     localStorage.removeItem('productSortType');
     localStorage.removeItem('filterPrice');
     localStorage.removeItem('filterColor');
     localStorage.removeItem('filterMaterial');
-    this.router.navigate(['/product/productlist', subcat]);
+  /*   this.router.navigate(['/product/productlist', subcat]); */
+/*    this.router.navigate(['/navheader/profile', this.spName, 'images', modelId]); */
+    this.router.navigate([ '/product/type', cat, 'productlist', subcat]);
   }
   toggleDropdownLeave() {
     this.selectedDropDown = '';

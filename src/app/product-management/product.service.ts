@@ -32,6 +32,11 @@ findAllMOQ(): Observable<any> {
     const url: string = this.serviceUrl + categoryUrl;
     return this.httpClient.get<Product>(url);
   }
+  geSuperProducts(superId): Observable<any> {
+    const categoryUrl = 'category/' + superId;
+    const url: string = this.serviceUrl + categoryUrl;
+    return this.httpClient.get<Product>(url);
+  }
   getViewCategory(id): Observable<any> {
     const categoryUrl = 'categoryDetails/';
     const url: string = this.serviceUrl + categoryUrl + id;

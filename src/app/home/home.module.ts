@@ -52,10 +52,14 @@ import {
   MatSliderModule
 } from '@angular/material';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CarouselItemComponent } from './carousel-item/carousel-item.component';
+import {CarouselItemDirective} from './carousel-item/carousel-item.directive';
 
 @NgModule({
   declarations: [BannerComponent, CategoryContentComponent, FooterComponent, ProductComponent, Promotion1Component, Promotion2Component,
-     ReviewComponent, StripComponent, SubscribeComponent, HomeComponent, AdsComponent, SupportComponent, BuyInBulkComponent, ContactUsComponent, PrivacyPolicyComponent, TermsAndConditionsComponent, FaqComponent, AboutUsComponent],
+     ReviewComponent, StripComponent, SubscribeComponent, HomeComponent, AdsComponent, SupportComponent, BuyInBulkComponent,
+      ContactUsComponent, 
+     PrivacyPolicyComponent, TermsAndConditionsComponent, FaqComponent, AboutUsComponent, CarouselItemComponent, CarouselItemDirective],
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule,
     HomeRoutingModule,

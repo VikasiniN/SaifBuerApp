@@ -47,6 +47,7 @@ export class ProductListComponent implements OnInit {
   filterModel: Filter;
   resultdata: any;
   userId: string;
+  categoryType;
   constructor(public productService: ProductService, private route: ActivatedRoute, private router: Router, private snackBar: MatSnackBar) {
 
   }
@@ -57,8 +58,14 @@ export class ProductListComponent implements OnInit {
     localStorage.removeItem('filterColor');
     this.productModel$ = this.route.paramMap.pipe(
       switchMap(params => {
+        this.categoryType = params.get('type');
         this.catid = params.get('catId');
-        this.getProducts();
+        console.log(this.categoryType, 'categorytype');
+        if (this.categoryType === 'sub') {
+          this.getProducts();
+        } else if (this.categoryType === 'super') {
+this.getSuperProducts();
+        }
         /* this.viewCategory(); */
         /* this.onLoadSortType(); */
         return this.catid;
@@ -70,6 +77,13 @@ export class ProductListComponent implements OnInit {
   }
   getProducts() {
     this.productService.getProducts(this.catid).subscribe(data => {
+      this.productModel = data;
+    }, err => {
+      console.log(err);
+    });
+  }
+  getSuperProducts() {
+    this.productService.geSuperProducts(this.catid).subscribe(data => {
       this.productModel = data;
     }, err => {
       console.log(err);

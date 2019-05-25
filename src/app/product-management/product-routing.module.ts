@@ -7,7 +7,7 @@ import {PlaceOrderComponent} from './place-order/place-order.component';
 
 const routes: Routes = [
   {
-    path: 'productlist/:catId',
+    path: 'type/:type/productlist/:catId',
     component: ProductListComponent
   },
   {
